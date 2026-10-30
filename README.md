@@ -140,7 +140,7 @@ Create a dedicated **NAT Network** in Oracle VirtualBox to provide network conne
 
 ---
 
-## Step 4. Import Kali Linux
+## 🔹 Step 4. Import Kali Linux
 
 The Kali Linux virtual machine was downloaded from the official Kali Linux website and imported into VirtualBox.
 
@@ -159,8 +159,215 @@ The VM was allocated:
 RAM: 2048 MB
 ```
 ![](https://github.com/jahidhsn-rng/networkwalks-B084D-week1-cybersecurity-lab-setup/blob/bd3e6e752b6f1af66f0dc8fffbc9d37aac2f2daf/kali%20snapp.PNG)
+
 A shared folder was also configured for transferring required files between the host operating system and the Kali VM.
 
 ---
 
+---
 
+## 🔹 Step 5: Configure the Kali Linux Network
+
+**Network Configuration**
+
+- IP Address: 10.0.0.2
+- Subnet Mask: 255.255.255.0
+- Gateway: 10.0.0.1
+- DNS: 8.8.8.8
+
+Using a fixed IP address simplifies lab documentation and makes it easier to identify and access the Kali Linux machine during future practical exercises.
+
+---
+
+## 🔹 Step 6. Create a Baseline VM Snapshot
+
+Once the initial setup and configuration were completed, a snapshot of the Kali Linux virtual machine was saved in VirtualBox.
+
+Example snapshot name:
+```text
+Kali Linux - Initial Network Setup
+```
+This snapshot serves as a backup of the virtual machine in its original configured state.
+
+If any future lab activity causes configuration errors or system issues, the virtual machine can easily be restored to this saved snapshot.
+
+---
+
+
+---
+
+## 🛡️ LAB VERIFICATION & VALIDATION
+
+The following tests were performed to verify the Kali Linux virtual machine configuration, network connectivity, and installed tools.
+
+| 🔧 Verification Test | 💻 Command / Action | 🎯 Expected Outcome |
+|:---|:---|:---|
+| 🖥️ IP Configuration | `ip a` | Displays the assigned Kali Linux IP address |
+| 🔗 Gateway Connectivity | `ping 10.0.0.1` | Successful ping replies received |
+| 🌐 Internet Connectivity | `ping 8.8.8.8` | External network connection confirmed |
+| 🔍 DNS Resolution | `nslookup networkwalks.com` | Domain name resolves successfully |
+| ⚙️ Nmap Verification | `nmap --version` | Installed Nmap version displayed |
+| 💾 Snapshot Recovery | Restore snapshot and run `ip a` | Original VM configuration restored |
+
+---
+
+### ✅ Verification Checklist
+
+- [ ] Kali Linux IP address configured correctly
+- [ ] Gateway connectivity verified
+- [ ] Internet access confirmed
+- [ ] DNS resolution working
+- [ ] Nmap installed and functioning
+- [ ] Virtual machine snapshot successfully restored
+
+**📌 Result:** The lab environment is ready for the next phase once all verification checks pass.
+
+---
+
+
+---
+
+# 🛠️ Troubleshooting & Issues Resolved
+
+Documenting technical challenges and their corresponding solutions is an essential part of maintaining a reliable and reproducible laboratory environment.
+
+## ⚠️ Issue 01: Network Connectivity After Static IP Configuration
+
+**Problem:**
+
+Following the manual configuration of IPv4 network settings, Internet connectivity was interrupted due to potential compatibility or configuration issues involving Kali Linux and NetworkManager.
+
+**Solution:**
+
+The following NetworkManager command was used as a troubleshooting measure:
+
+```bash
+sudo nmcli connection modify "Wired connection 1" ipv4.dad-timeout 0
+```
+
+After applying the configuration, the network connection was restarted and connectivity was tested again.
+
+> **Note:** Network connection names may vary across systems. Use `nmcli connection show` to identify the correct connection name before executing the command.
+
+---
+
+## ⚠️ Issue 02: VirtualBox Hardware Virtualization Error
+
+**Problem:**
+
+The Kali Linux virtual machine initially failed to start because hardware virtualization (Intel VT-x) was disabled in the system BIOS/UEFI firmware.
+
+**Resolution Steps:**
+
+1. Restarted the host computer.
+2. Entered the BIOS/UEFI configuration menu.
+3. Located and enabled Intel VT-x (hardware virtualization).
+4. Saved the updated firmware settings.
+5. Restarted the system.
+6. Launched the Kali Linux virtual machine again.
+
+**Outcome:**
+
+The virtualization issue was resolved, and the Kali Linux virtual machine started successfully.
+
+---
+
+# 📚 Key Learnings & Technical Takeaways
+
+Throughout this project, I gained practical experience in configuring virtualized environments and establishing a foundation for cybersecurity laboratory exercises.
+
+The key technical concepts covered include:
+
+### 01. 🌐 NAT vs. NAT Network
+
+I learned the functional differences between VirtualBox NAT and NAT Network configurations.
+
+Unlike standard NAT, NAT Network allows multiple virtual machines connected to the same virtual network to communicate with one another while providing network address translation for external connectivity.
+
+This configuration is particularly useful when developing multi-machine cybersecurity testing environments.
+
+### 02. 🔌 Virtual Machine Networking
+
+I gained a better understanding of how VirtualBox network adapters connect virtual machines to different network environments.
+
+I also explored how network adapter configurations influence connectivity and communication between virtual machines and external networks.
+
+### 03. 📡 Static IP Address Configuration
+
+I developed practical experience configuring and verifying IPv4 network parameters in Kali Linux, including:
+
+- IP addresses
+- Subnet masks
+- Default gateways
+- DNS servers
+
+I also learned the importance of maintaining consistent network configurations throughout laboratory exercises.
+
+### 04. 💾 Virtual Machine Snapshots & Recovery
+
+I learned the importance of creating a clean baseline snapshot before conducting experimental or potentially disruptive activities.
+
+Snapshots provide a reliable recovery point, allowing the virtual machine to return to a previously saved configuration when troubleshooting or performing future cybersecurity exercises.
+
+### 05. 📝 Technical Documentation
+
+I recognized the importance of maintaining structured and detailed technical documentation.
+
+Recording commands, network configurations, screenshots, troubleshooting procedures, and their corresponding solutions improves reproducibility and makes technical projects easier to understand, maintain, and review.
+
+---
+
+# 🔐 Security & Ethical Considerations
+
+This laboratory environment was developed exclusively for educational purposes, cybersecurity training, and authorized testing.
+
+All experiments and security-related activities should be performed only within systems and networks for which proper authorization has been obtained.
+
+**⚖️ Responsible Learning. Ethical Testing. Continuous Improvement.**
+
+---
+
+
+---
+
+# 🔗 Tools, Platforms & Resources
+
+The following tools and platforms were used during the laboratory setup and configuration process.
+
+| 🧰 Tool / Platform | 🔗 Official Resource |
+|:---|:---|
+| 📦 WinRAR | [Official Download Page](https://www.win-rar.com/download.html) |
+| 🖥️ Oracle VirtualBox | [Official Download Page](https://www.virtualbox.org/wiki/Downloads) |
+| 🐉 Kali Linux | [Official Download Page](https://www.kali.org/get-kali/) |
+
+---
+
+## 👨‍💻 Author & Contact
+
+# Jahid Hassan
+
+Cybersecurity Enthusiast | Aspiring Security Professional
+
+
+🔗 **LinkedIn Profile:** [Connect with me on LinkedIn](https://www.linkedin.com/in/jahid-hassan-rng57/)
+
+---
+
+## 📋 Project Information
+
+| **Project Details** | **Description** |
+|:---|:---|
+| 🎓 Program | Cybersecurity at networkWalks |
+| 📅 Week | 01 |
+| 🛡️ Project Title | Cybersecurity & Penetration Testing Lab Setup |
+| 💻 Platform | GitHub |
+| 👨‍💻 Author | Jahid Hassan |
+| 🏷️ Batch | B084 |
+
+---
+
+**⭐ Thank you for visiting this repository!**
+
+Feel free to explore the project, review the configurations, and connect with me on LinkedIn.
+
+---

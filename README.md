@@ -66,7 +66,8 @@ The environment can be utilized for a variety of hands-on security exercises, in
 
 ## 🏗️ Lab Architecture
 
-![]()
+![](<img width="1920" height="1033" alt="image" src="https://github.com/user-attachments/assets/d5a487bf-4a38-412c-9ff4-6df256d3e9b8" />
+)
 
 
 Additional virtual machines can be integrated into the existing isolated network in future projects to expand the lab environment and support more advanced cybersecurity testing scenarios.

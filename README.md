@@ -177,6 +177,8 @@ A shared folder was also configured for transferring required files between the 
 
 Using a fixed IP address simplifies lab documentation and makes it easier to identify and access the Kali Linux machine during future practical exercises.
 
+![](https://github.com/jahidhsn-rng/networkwalks-B084D-week1-cybersecurity-lab-setup/blob/97e288663432ec4a2d63f8d3341490129ad5697e/Network%20edit.PNG)
+
 ---
 
 ## 🔹 Step 6. Create a Baseline VM Snapshot
@@ -346,7 +348,7 @@ The following tools and platforms were used during the laboratory setup and conf
 
 # Jahid Hassan
 
-Cybersecurity Enthusiast | Aspiring Security Professional
+**Cybersecurity Enthusiast | Aspiring Security Professional**
 
 
 🔗 **LinkedIn Profile:** [Connect with me on LinkedIn](https://www.linkedin.com/in/jahid-hassan-rng57/)

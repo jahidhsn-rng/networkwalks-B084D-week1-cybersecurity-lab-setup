@@ -66,7 +66,7 @@ The environment can be utilized for a variety of hands-on security exercises, in
 
 ## 🏗️ Lab Architecture
 
-![]()
+![image alt](https://github.com/jahidhsn-rng/networkwalks-B084D-week1-cybersecurity-lab-setup/blob/073000173f0db0353ac141df1556bafc293154f7/kali%20snapp.PNG)
 
 
 Additional virtual machines can be integrated into the existing isolated network in future projects to expand the lab environment and support more advanced cybersecurity testing scenarios.

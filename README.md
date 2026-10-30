@@ -66,7 +66,7 @@ The environment can be utilized for a variety of hands-on security exercises, in
 
 ## 🏗️ Lab Architecture
 
-![image alt](https://github.com/jahidhsn-rng/networkwalks-B084D-week1-cybersecurity-lab-setup/blob/073000173f0db0353ac141df1556bafc293154f7/kali%20snapp.PNG)
+![image alt](https://github.com/jahidhsn-rng/networkwalks-B084D-week1-cybersecurity-lab-setup/blob/c7af2cf9e1b6e044277d67ac75d24fe9891a945a/vm%20box.PNG)
 
 
 Additional virtual machines can be integrated into the existing isolated network in future projects to expand the lab environment and support more advanced cybersecurity testing scenarios.
@@ -93,3 +93,48 @@ Additional virtual machines can be integrated into the existing isolated network
 
 ---
 
+
+# 🪜 Lab Setup Procedure
+
+## 🔹 Step 1: Install Win-rar
+
+Install **Win-rar** to extract the Kali Linux virtual machine package, which is commonly provided in `.zip` archive format.
+
+- 🧰 **Tool:** Win-rar
+- 📦 **Purpose:** Extract the Kali Linux VM archive.
+
+---
+
+## 🔹 Step 2: Install Oracle VirtualBox
+
+Install **Oracle VirtualBox** to create and manage the virtual machines required for the cybersecurity lab.
+
+- 🖥️ **Tool:** Oracle VirtualBox 7.0
+- ⚙️ **Purpose:** Provide the virtualization platform for running Kali Linux.
+
+---
+
+## 🔹 Step 3: Configure the NAT Network
+
+Create a dedicated **NAT Network** in Oracle VirtualBox to provide network connectivity for the cybersecurity lab while keeping the virtual environment separated from the host network.
+
+![]()
+
+### ⚙️ Network Configuration
+
+| 🔧 Parameter | 📡 Configuration |
+|:---|:---|
+| 🏷️ Network Name | `NatNetwork` |
+| 🌐 IPv4 Prefix | `10.0.0.0/24` |
+| 🔄 DHCP Server | Enabled |
+| 🚫 IPv6 | Disabled |
+| 🔗 Network Type | NAT Network |
+
+### 🎯 Purpose
+
+- Establish a private virtual network for the lab.
+- Enable internet connectivity for connected virtual machines.
+- Allow communication between machines on the same NAT Network.
+- Provide DHCP-based IP address assignment.
+
+---

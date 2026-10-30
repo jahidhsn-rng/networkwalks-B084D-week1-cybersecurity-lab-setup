@@ -118,7 +118,7 @@ Install **Oracle VirtualBox** to create and manage the virtual machines required
 
 Create a dedicated **NAT Network** in Oracle VirtualBox to provide network connectivity for the cybersecurity lab while keeping the virtual environment separated from the host network.
 
-![]()
+![](https://github.com/jahidhsn-rng/networkwalks-B084D-week1-cybersecurity-lab-setup/blob/103a8cdfa3bbe98898ad4153210c43da8fde0b57/NAT%20network.PNG)
 
 ### ⚙️ Network Configuration
 

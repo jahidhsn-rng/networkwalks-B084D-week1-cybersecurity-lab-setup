@@ -1,98 +1,76 @@
-🔐 Cybersecurity Home Lab | Virtual Penetration Testing Environment
+<div align="center">
+
+  # 🛡️ Cybersecurity & Ethical Hacking Lab
+
+**Designing a secure virtual environment for hands-on security testing, network analysis, and ethical hacking experiments**
+</div>
 
 <p align="center">
-<img src="https://img.shields.io/badge/Domain-Cybersecurity-B91C1C?style=for-the-badge&logo=hackthebox&logoColor=white" alt="Cybersecurity" />
-<img src="https://img.shields.io/badge/Platform-VirtualBox-2563EB?style=for-the-badge&logo=virtualbox&logoColor=white" alt="VirtualBox" />
-<img src="https://img.shields.io/badge/OS-Kali%20Linux-557C94?style=for-the-badge&logo=kalilinux&logoColor=white" alt="Kali Linux" />
-<img src="https://img.shields.io/badge/Purpose-Ethical%20Hacking-15803D?style=for-the-badge&logo=securityscorecard&logoColor=white" alt="Ethical Hacking" />
+  <img src="https://img.shields.io/badge/Domain-CyberSecurity-8B0000?style=flat-square&labelColor=111111&logo=hackthebox&logoColor=white" />
+  <img src="https://img.shields.io/badge/Hypervisor-VirtualBox%207.0-0070C0?style=flat-square&labelColor=111111&logo=virtualbox&logoColor=white" />
+  <img src="https://img.shields.io/badge/OS-Kali%20Linux%202026.3-557C94?style=flat-square&labelColor=111111&logo=kalilinux&logoColor=white" />
+  <img src="https://img.shields.io/badge/Platform-Linux-FCC624?style=flat-square&labelColor=111111&logo=linux&logoColor=white" />
+  <img src="https://img.shields.io/badge/Network-10.0.0.0%2F24-238F89?style=flat-square&labelColor=111111&logo=cisco&logoColor=white" />
+  <img src="https://img.shields.io/badge/Focus-Penetration%20Testing-C00000?style=flat-square&labelColor=111111&logo=kalilinux&logoColor=white" />
+  <img src="https://img.shields.io/badge/Technology-Virtualization-6A5ACD?style=flat-square&labelColor=111111" />
+  <img src="https://img.shields.io/badge/Tools-Network%20Analysis-238F89?style=flat-square&labelColor=111111" />
+  <img src="https://img.shields.io/badge/Practice-Ethical%20Hacking-E87500?style=flat-square&labelColor=111111" />
+  <img src="https://img.shields.io/badge/Lab-Environment-404040?style=flat-square&labelColor=8B0000" />
+     <img src="https://img.shields.io/badge/Jahid%20Hassan-C00000?style=flat-square" />
 </p>
 
-<p align="center">
-<i>Building my first isolated cybersecurity lab to explore penetration testing, Linux administration, network security, and ethical hacking.</i>
-</p>
+---
 
-📌 About the Project
+# 📌 About This Project
 
-This project documents my journey of building my first cybersecurity lab environment using virtualization technology. The goal is to create a controlled environment where I can safely learn, experiment, and practice cybersecurity techniques without affecting real-world systems.
+This project involves building a dedicated virtual lab for cybersecurity research and ethical penetration testing using Oracle VirtualBox and Kali Linux.
+The goal is to establish an isolated and manageable testing environment for exploring security tools, performing network discovery, conducting reconnaissance, identifying potential vulnerabilities, and practicing various security assessment techniques.
+A private virtual network is used to maintain separation from external systems while allowing future expansion with additional virtual machines that can serve as controlled targets for authorized penetration-testing exercises.
 
-The lab is designed for hands-on learning, security experimentation, and developing practical skills in penetration testing and network analysis.
+# 🎯 Project Goals & Objectives
 
-🎯 Objectives
-🖥️ Set up a virtualized cybersecurity lab using Oracle VirtualBox.
-🐉 Install and configure Kali Linux as the primary security testing machine.
-🌐 Understand virtual networking and private IP addressing.
-🔍 Explore network reconnaissance and service enumeration.
-🛡️ Practice ethical hacking techniques in authorized lab environments.
-📚 Document configurations, commands, findings, and lessons learned.
-🧰 Tools & Technologies
-Tool / Technology	Purpose
-Oracle VirtualBox	Virtual machine management
-Kali Linux	Penetration testing and security assessment
-Linux Terminal	Command-line operations and system administration
-Virtual Networking	Network isolation and lab connectivity
-GitHub	Project documentation and version control
-🏗️ Lab Architecture
-text
-             HOST MACHINE
-                   |
-            Oracle VirtualBox
-                   |
-          Isolated Virtual Network
-              10.0.0.0/24
-                   |
-          +--------+--------+
-          |                 |
-     Kali Linux VM     Target VM
-     Security Testing   Practice Target
-     10.0.0.x           10.0.0.y
+This project aims to establish a secure and isolated virtual cybersecurity environment by completing the following tasks:  
 
-Note: The diagram illustrates the intended architecture. The target machine and IP assignments should be updated to match the actual lab configuration.
-⚙️ Environment Configuration
-Component	Configuration
-Hypervisor	Oracle VirtualBox 7.2
-Attacker Machine	Kali Linux
-Target Machine	To be configured
-Network Range	10.0.0.0/24
-Network Mode	Host-only or Internal Network, as appropriate
-Lab Purpose	Authorized security testing
+     
+- 🖥️ Install and configure Oracle VirtualBox as the virtualization platform.   
+- 🐉 Set up Kali Linux as a guest virtual machine.     
+- 🌐 Create and configure a dedicated NAT Network for the lab environment.     
+- 🔗 Establish stable network connectivity between virtual machines.      
+- 📍 Assign a static IP address to the Kali Linux virtual machine.      
+- 🔍 Verify network connectivity, default gateway access, and DNS resolution.      
+- 💾 Create a baseline virtual machine snapshot for backup and recovery.         
+- 📝 Document the installation, configuration, and verification procedures.        
+- 🚀 Prepare the lab infrastructure for future penetration testing and cybersecurity projects.
 
-Replace these values with your actual configuration if they differ. The network range alone does not guarantee isolation; verify the VirtualBox network settings before testing.
+---
 
-🚀 Setup Workflow
-Install VirtualBox — Prepare the virtualization platform.
-Deploy Kali Linux — Create and configure the security testing VM.
-Configure Networking — Set up a private virtual network for lab communication.
-Verify Connectivity — Check interface settings, IP addresses, and permitted communication.
-Prepare a Target — Add an intentionally vulnerable VM for authorized practice.
-Take Snapshots — Save clean VM states before experiments.
-Begin Testing — Practice reconnaissance and enumeration within the isolated lab.
-🧪 Planned Hands-On Exercises
-Linux fundamentals and terminal navigation
-IP addressing, subnetting, and network interfaces
-Network discovery using Nmap
-Port scanning and service enumeration
-Packet inspection using Wireshark
-Vulnerability assessment on authorized targets
-Basic web application security testing
-Security findings and report documentation
-🔒 Security Considerations
-Keep testing restricted to systems you own or have explicit permission to assess.
-Use an isolated virtual network for vulnerable targets.
-Avoid bridged networking for intentionally vulnerable machines unless there is a specific, controlled reason.
-Take snapshots before making significant changes.
-Never store passwords, private keys, tokens, or other secrets in the repository.
-Verify network isolation before running security tools.
-📁 Repository Structure
-text
-cybersecurity-home-lab/
-├── README.md
-├── screenshots/
-│   ├── virtualbox-setup.png
-│   ├── kali-linux-desktop.png
-│   └── network-configuration.png
-├── documentation/
-│   ├── setup-guide.md
-│   └── lab-notes.md
-└── exercises/
-    ├── linux-fundamentals.md
-    └── network-reconnaissance.md
+
+# 🛡️ Lab Purpose & Applications
+
+The purpose of this lab is to provide a dedicated, isolated, and secure environment for developing practical cybersecurity skills and performing authorized security assessments.
+
+The environment can be utilized for a variety of hands-on security exercises, including:
+
+- **🔎 Network Reconnaissance –** Discovering hosts and gathering network information.   
+- **🌐 Port Scanning –** Identifying open ports and running network services.  
+- **🛠️ Vulnerability Assessment –** Detecting and analyzing potential security weaknesses.  
+- **📡 Packet Analysis –** Capturing and inspecting network traffic.  
+- **🔐 Web Security Testing –** Exploring common web application security issues.  
+- **💻 Exploitation Practice –** Learning exploitation techniques in controlled lab scenarios.  
+- **⚙️ Security Tool Experimentation –** Installing, configuring, and testing various cybersecurity tools.
+
+
+**⚠️Disclaimer:** All activities are intended for educational purposes and authorized testing within the isolated lab environment.
+
+---
+
+## 🏗️ Lab Architecture
+
+![]()
+
+
+Additional virtual machines can be integrated into the existing isolated network in future projects to expand the lab environment and support more advanced cybersecurity testing scenarios.
+
+---
+
+  
